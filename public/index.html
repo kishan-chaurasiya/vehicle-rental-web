@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DriveEase | Vehicle Rental</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header>
+  <div class="logo">Drive<span>Ease</span></div>
+  <nav>
+    <a href="#home">Home</a><a href="#vehicles">Vehicles</a><a href="#book">Book</a>
+    <a href="#bookings">My Bookings</a><button onclick="openLogin()">Login</button>
+  </nav>
+</header>
+
+<section class="hero" id="home">
+  <div>
+    <p class="tag">SMART • SIMPLE • AFFORDABLE</p>
+    <h1>Rent your ride.<br><span>Start your journey.</span></h1>
+    <p class="hero-text">Choose from reliable cars and bikes, select your dates, and book your vehicle in minutes.</p>
+    <a class="primary" href="#vehicles">Explore Vehicles</a>
+  </div>
+  <div class="hero-card">
+    <div class="car-icon">🚗</div>
+    <h3>Ready when you are</h3>
+    <p>Flexible rentals for city trips, travel and everyday needs.</p>
+  </div>
+</section>
+
+<section class="search-box">
+  <h2>Find your vehicle</h2>
+  <div class="search-grid">
+    <input id="search" placeholder="Search vehicle...">
+    <select id="typeFilter"><option value="">All Types</option><option>Car</option><option>SUV</option><option>Bike</option></select>
+    <button class="primary" onclick="loadVehicles()">Search</button>
+  </div>
+</section>
+
+<section id="vehicles">
+  <div class="section-head"><div><p class="tag">OUR FLEET</p><h2>Choose your vehicle</h2></div></div>
+  <div class="vehicle-grid" id="vehicleGrid"></div>
+</section>
+
+<section id="book" class="booking-section">
+  <div class="booking-info"><p class="tag">EASY BOOKING</p><h2>Book in a few steps</h2><p>Select a vehicle and provide your pickup and drop-off details.</p></div>
+  <form id="bookingForm">
+    <select id="vehicleSelect" required><option value="">Select vehicle</option></select>
+    <input id="username" placeholder="Username (login first)" required>
+    <input id="pickup" type="date" required>
+    <input id="dropoff" type="date" required>
+    <input id="days" type="number" min="1" value="1" placeholder="Rental days" required>
+    <button class="primary" type="submit">Confirm Booking</button>
+  </form>
+</section>
+
+<section id="bookings">
+  <p class="tag">ACCOUNT</p><h2>My Bookings</h2>
+  <div id="bookingList" class="booking-list"><p>Login and enter your username to view bookings.</p></div>
+</section>
+
+<footer><div class="logo">Drive<span>Ease</span></div><p>Vehicle Rental System • C++ Web Project</p></footer>
+
+<div class="modal" id="loginModal">
+  <div class="modal-box">
+    <button class="close" onclick="closeLogin()">×</button>
+    <h2>Welcome back</h2>
+    <input id="loginUser" placeholder="Username">
+    <input id="loginPass" type="password" placeholder="Password">
+    <button class="primary full" onclick="login()">Login</button>
+    <p id="loginMsg"></p>
+    <hr>
+    <h3>New user?</h3>
+    <input id="regUser" placeholder="New username">
+    <input id="regPass" type="password" placeholder="New password">
+    <button class="secondary full" onclick="registerUser()">Create Account</button>
+    <p id="regMsg"></p>
+  </div>
+</div>
+<script src="script.js"></script>
+</body>
+</html>

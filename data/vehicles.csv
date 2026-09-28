@@ -1,0 +1,7 @@
+id,name,type,seats,fuel,transmission,price,image
+1,Maruti Swift,Car,5,Petrol,Manual,1499,🚗
+2,Hyundai Creta,SUV,5,Petrol,Automatic,2499,🚙
+3,Toyota Innova,SUV,7,Diesel,Manual,3299,🚐
+4,Honda City,Car,5,Petrol,Automatic,2199,🚘
+5,Royal Enfield Classic,Bike,2,Petrol,Manual,899,🏍️
+6,TVS Apache,Bike,2,Petrol,Manual,699,🏍️
